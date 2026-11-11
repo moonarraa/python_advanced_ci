@@ -1,0 +1,24 @@
+[tool.black]
+line-length = 79
+target-version = ["py39"]
+
+[tool.isort]
+# profile black — чтобы isort и black одинаково переносили длинные импорты
+profile = "black"
+line_length = 79
+
+[tool.mypy]
+strict = true
+plugins = ["pydantic.mypy"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.coverage.run]
+# асинхронная SQLAlchemy работает через greenlet — без этого coverage
+# не видит строки, выполненные после await
+concurrency = ["greenlet", "thread"]
+source = ["app"]

@@ -1,0 +1,10 @@
+# flake8 не читает pyproject.toml, поэтому настройки здесь
+[flake8]
+# та же длина строки, что у black
+max-line-length = 79
+# E203 (пробел перед ":" в срезах), E701/E704 (несколько выражений в строке)
+# black форматирует именно так — эти проверки конфликтуют с ним.
+# W503 уже в списке игнорируемых по умолчанию.
+extend-ignore = E203, E701, E704
+max-complexity = 10
+exclude = .git, __pycache__, .venv, venv, .mypy_cache, .pytest_cache

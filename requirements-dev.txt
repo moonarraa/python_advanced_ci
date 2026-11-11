@@ -1,0 +1,15 @@
+-r requirements.txt
+
+# тесты
+pytest==8.4.2
+pytest-asyncio==1.2.0
+pytest-cov==7.1.0
+httpx==0.28.1
+
+# линтеры
+black==25.11.0
+isort==6.1.0
+flake8==7.3.0
+flake8-bugbear==24.12.12
+flake8-pie==0.16.0
+mypy==1.19.1

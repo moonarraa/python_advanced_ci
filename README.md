@@ -50,7 +50,7 @@ pytest --cov=app --cov-report=term-missing --cov-fail-under=90
 
 * **Linters** (Python 3.12) — `black`, `isort`, `flake8` (с плагинами `flake8-bugbear` и `flake8-pie`)
   и `mypy` в режиме `strict` с плагином pydantic.
-* **Tests** (Python 3.9 и 3.12) — `pip check` на конфликты зависимостей и `pytest` с замером покрытия:
+* **Tests** (Python 3.10 и 3.12) — `pip check` на конфликты зависимостей и `pytest` с замером покрытия:
   джоба падает, если покрытие ниже 90%.
 
 ### Конфликт black и flake8
